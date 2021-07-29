@@ -14,18 +14,17 @@
     <script src="https://kit.fontawesome.com/12d18217b6.js" crossorigin="anonymous"></script>
 
     <!-- font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&family=Shrikhand&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,700&family=Shrikhand&display=swap"
+     rel="stylesheet">
 
     <!-- feuilles de styles -->
-    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body>
     <header>
         <div class="top">
-            <img src="../images/logo/logo_omyfood.svg" alt="">
+            <img src="./images/logo/logo_omyfood.svg" alt="">
         </div>
 
         <div class="map">
@@ -40,62 +39,62 @@
     </header>
     <section class="fonctionnement">
         <h2>Fonctionnement</h2>
-        <ul class="fonctionnement_ul">
+        <ul class="fonctionnement__ul">
             <li>
-                <p class="number">1</p><i class="fas fa-mobile-alt"></i>
-                <p class="function_text">Choissisez un restaurant</p>
+                <p class="fonctionnement__number">1</p><i class="fas fa-mobile-alt"></i>
+                <p class="fonctionnement__text">Choissisez un restaurant</p>
+            </li>
+        </ul>
+        <ul class="fonctionnement__ul">
+            <li>
+                <p class="fonctionnement__number">2</p><i class="fas fa-list-ul"></i>
+                <p class="fonctionnement__text">Composez votre menu</p>
             </li>
         </ul>
         <ul class="fonctionnement_ul">
             <li>
-                <p class="number">2</p><i class="fas fa-list-ul"></i>
-                <p class="function_text">Composez votre menu</p>
-            </li>
-        </ul>
-        <ul class="fonctionnement_ul">
-            <li>
-                <p class="number">3</p><i class="fas fa-store"></i>
-                <p class="function_text">Dégustez au restaurant</p>
+                <p class="fonctionnement__number">3</p><i class="fas fa-store"></i>
+                <p class="fonctionnement__text">Dégustez au restaurant</p>
             </li>
         </ul>
     </section>
     <section id="restaurants">
         <h2>Restaurants</h2>
         <div class="card_container">
-            <a href="la_palette_du_gout.html" class="restaurant_card_new">
-                <img src="../images/restaurants/la_palette_du_gout.jpg" alt="">
+            <a href="./menu/la_palette_du_gout.html" class="card--new">
+                <img src="./images/restaurants/la_palette_du_gout.jpg" alt="">
                 <div class="content">
-                    <div class="content_text">
+                    <div class="content__text">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
-            <a href="la_note_enchantee.html" class="restaurant_card_new">
-                <img src="../images/restaurants/la_note_enchantee.jpg" alt="">
+            <a href="./menu/la_note_enchantee.html" class="card--new">
+                <img src="./images/restaurants/la_note_enchantee.jpg" alt="">
                 <div class="content">
-                    <div class="content_text">
+                    <div class="content__text">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
-            <a href="a_la_francaise.html" class="restaurant_card">
-                <img src="../images/restaurants/a_la_francaise.jpg" alt="">
+            <a href="./menu/a_la_francaise.html" class="card">
+                <img src="./images/restaurants/a_la_francaise.jpg" alt="">
                 <div class="content">
-                    <div class="content_text">
+                    <div class="content__text">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
                     <i class="far fa-heart"></i>
                 </div>
             </a>
-            <a href="le_delice_des_sens.html" class="restaurant_card">
-                <img src="../images/restaurants/le_delice_des_sens.jpg" alt="">
+            <a href="./menu/le_delice_des_sens.html" class="card">
+                <img src="./images/restaurants/le_delice_des_sens.jpg" alt="">
                 <div class="content">
-                    <div class="content_text">
+                    <div class="content__text">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
@@ -105,7 +104,7 @@
         </div>
     </section>
     <footer>
-        <img src="../images/logo/logo_omyfood.svg" alt="">
+        <img src="./images/logo/logo_omyfood.svg" alt="">
         <ul>
             <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
             <li><i class="fas fa-hands-helping fa-xs"></i><a href="#">Devenir Partenaire</a></li>
