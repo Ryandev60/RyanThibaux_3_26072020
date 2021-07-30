@@ -1,6 +1,7 @@
 @import "../utils/variable";
 @import "../utils/mixins";
 @import "../layout/footer";
+@import "../layout/top";
 
 * {
   margin: 0;
@@ -8,9 +9,6 @@
   outline-color: black;
   text-decoration: none;
   list-style: none;
-}
-
-body {
   font-family: "Roboto";
 }
 
@@ -18,10 +16,13 @@ header {
   display: flex;
   flex-direction: column;
   .top {
-    height: 4rem;
-    box-shadow: 0px 1px 10px #a3a2a5;
-    @include flex-center;
-    z-index: 1;
+    @include top;
+
+    img {
+      position: absolute;
+        top: 1.4rem;
+        height: 1.8rem;
+    }
   }
 
   .map {
@@ -30,7 +31,7 @@ header {
     @include flex-center;
 
     i {
-      color: #353535;
+      color: $secondarycolor;
     }
 
     input {
@@ -40,7 +41,7 @@ header {
       height: 2rem;
       margin-left: 1rem;
       padding-left: 0.2rem;
-      font-family: "Roboto";
+
       font-weight: bolder;
 
       &::placeholder {
@@ -55,12 +56,14 @@ header {
     h2 {
       padding: 2rem 15% 1rem 15%;
       text-align: center;
+      
     }
 
     p {
       padding: 0rem 0.5rem 1.5rem 0.5rem;
       text-align: center;
       color: #4d4d4d;
+      font-size: 1.1rem;
     }
 
     .btn {
@@ -92,7 +95,7 @@ header {
     height: 4.5rem;
     border-radius: 1rem;
     background-color: $primarycolor;
-    box-shadow: 0px 6px 10px #d3cccc;
+    box-shadow: $shadow;
     margin: 0rem 1rem 1.5rem 2rem;
 
     &:last-child {
@@ -117,7 +120,7 @@ header {
         font-size: 0.8rem;
         height: 1.5rem;
         width: 1.5rem;
-        border-radius: 50px;
+        border-radius: 50%;
         @include flex-center;
         transform: translateX(-10px);
       }
@@ -141,7 +144,7 @@ header {
 
 #restaurants {
   background-color: $primarycolor;
-  padding: 0 1rem;
+  padding: 0 1rem 3rem 1rem;
 
   h2 {
     padding: 3rem 0rem 1.5rem 1rem;
@@ -164,6 +167,7 @@ header {
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    box-shadow: $shadow;
 
     &__text {
       margin: 0.8rem 1rem;
@@ -181,6 +185,24 @@ header {
 
     &:active {
       color: blue;
+    }
+  }
+
+  .card--new {
+    position: relative;
+
+    &::before {
+      content: "Nouveau";
+      font-family: "Roboto";
+      font-weight: 500;
+      color: #008766;
+      background-color: #99e2d0;
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 0.8rem;
+      padding: 0.4rem 0.75rem 0.3rem 0.75rem;
+      border-radius: 2px
     }
   }
 }

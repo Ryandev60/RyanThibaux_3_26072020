@@ -1,0 +1,6 @@
+@mixin top {
+        height: 4rem;
+        box-shadow: $shadow;
+        @include flex-center;
+        z-index: 1;
+      }
