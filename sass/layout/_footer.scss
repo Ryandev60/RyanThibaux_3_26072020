@@ -1,20 +1,39 @@
-@mixin footer {
-    background-color: $secondarycolor;
-    padding-left: 1rem;
+footer {
+  position:relative;
+  background-color: $secondarycolor;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  color: #fff;
+
+  @media #{$tablette} {
+    height:7rem
+  }
+
+  h4 {
     color: #fff;
-  
-    img {
-      filter: invert(99%) sepia(99%) saturate(0%) hue-rotate(176deg)
-        brightness(107%) contrast(100%);
-      height: 1rem;
-      padding-top: 2rem;
-      margin-bottom: 1rem;
+    font-family: 'Shrikhand';
+    font-weight: 100;
+    font-size: 1.2rem;
+    padding:1.5rem 0 1rem 0;
+
+    @media #{$tablette} {
+      @include flex-center;
+      font-size:2rem;
+      padding: 0.25rem 0 1.5rem 0;
     }
-  
+  }
+
+  ul {
+
+    @media #{$tablette} {
+      display: flex;
+      justify-content: space-around;
+    }
+
     a {
       font-family: "Roboto";
       font-size: 1rem;
-      font-weight: 100;
+      font-weight: 400;
       color: #fff;
     }
   
@@ -25,9 +44,6 @@
     li {
       font-family: "Roboto";
       line-height: 1.7rem;
-  
-      &:last-child{
-        padding-bottom: 2rem;
-      } 
     }
- }
+  }
+}
