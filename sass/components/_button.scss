@@ -9,6 +9,7 @@
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: $shadow;
   transition: 0.5s;
+  grid-column-start: 2;
   a {
     color: #fff;
   }

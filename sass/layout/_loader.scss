@@ -1,0 +1,173 @@
+.loader {
+  opacity: 0;
+  z-index: -4;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  animation: load;
+  animation-duration: 4s;
+
+  &__eiffel {
+    img {
+      height: 10rem;
+      position: absolute;
+      left: calc(50% - 30px);
+      top: 4%;
+      animation: rotate 3s;
+      filter: invert(81%) sepia(28%) saturate(363%) hue-rotate(115deg)
+        brightness(102%) contrast(85%);
+    }
+  }
+
+  &__utensils {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 75px);
+    box-sizing: border-box;
+    border-top: 10px solid #ff79da;
+    border-right: 10px solid #99e2d0;
+    border-bottom: 10px solid #9356dc;
+    border-left: 10px solid #99e2d0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 3s;
+    box-shadow: 0px 0px 10px #000;
+
+    i {
+      position: absolute;
+      font-size: 3rem;
+      color: #000;
+      color: #99e2d0;
+    }
+  }
+
+  &__title {
+    display: flex;
+    position: absolute;
+    font-size: 3rem;
+    top: 65%;
+    left: calc(50% - 130px);
+
+    .oh {
+      display: flex;
+      animation: left 3s;
+      text-shadow: 0px 0px 10px rgb(109, 0, 0);
+
+      .o {
+        color: #ff79da;
+        font-family: "Shrikhand";
+      }
+
+      .h {
+        color: #d46bdb;
+        font-family: "Shrikhand";
+      }
+    }
+
+    .my {
+      display: flex;
+      animation: down 3s;
+      text-shadow: 0px 0px 10px #000;
+
+      .m {
+        color: #cb68db;
+        font-family: "Shrikhand";
+      }
+
+      .y {
+        color: #9356dc;
+        font-family: "Shrikhand";
+      }
+    }
+
+    .food {
+      display: flex;
+      animation: right 3s;
+      text-shadow: 0px 0px 10px #000;
+
+      .f {
+        color: #9469da;
+        font-family: "Shrikhand";
+      }
+
+      .o2 {
+        color: #9581db;
+        font-family: "Shrikhand";
+      }
+
+      .o3 {
+        color: #9699d6;
+        font-family: "Shrikhand";
+      }
+
+      .d {
+        color: #97acd4;
+        font-family: "Shrikhand";
+      }
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotateY(0.5turn);
+      opacity: 0;
+    }
+
+    50% {
+      transform: rotate(5turn) scale(1.3);
+    }
+
+    100% {
+      transform: rotate(3turn);
+    }
+  }
+
+  @keyframes left {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes down {
+    0% {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes right {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateY(2turn);
+      opacity: 0;
+    }
+  }
+
+  @keyframes load {
+    0% {
+      opacity: 1;
+      z-index: 10;
+    }
+
+    80% {
+      opacity: 1;
+    }
+
+    100% {
+      z-index: 10;
+      opacity: 0;
+    }
+  }
+}

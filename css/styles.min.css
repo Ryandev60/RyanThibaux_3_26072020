@@ -20,6 +20,7 @@
   background: linear-gradient(#ff79da, #9356dc);
   box-shadow: 0 3px 10px #C5C5C5;
   transition: 0.5s;
+  grid-column-start: 2;
 }
 .btn a {
   color: #fff;
@@ -29,6 +30,214 @@
   box-shadow: 0px 0px 10px #726a6a;
 }
 
+.loader {
+  opacity: 0;
+  z-index: -4;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  animation: load;
+  animation-duration: 4s;
+}
+.loader__eiffel img {
+  height: 10rem;
+  position: absolute;
+  left: calc(50% - 30px);
+  top: 4%;
+  animation: rotate 3s;
+  filter: invert(81%) sepia(28%) saturate(363%) hue-rotate(115deg) brightness(102%) contrast(85%);
+}
+.loader__utensils {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  box-sizing: border-box;
+  border-top: 10px solid #ff79da;
+  border-right: 10px solid #99e2d0;
+  border-bottom: 10px solid #9356dc;
+  border-left: 10px solid #99e2d0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 3s;
+  box-shadow: 0px 0px 10px #000;
+}
+.loader__utensils i {
+  position: absolute;
+  font-size: 3rem;
+  color: #000;
+  color: #99e2d0;
+}
+.loader__title {
+  display: flex;
+  position: absolute;
+  font-size: 3rem;
+  top: 65%;
+  left: calc(50% - 130px);
+}
+.loader__title .oh {
+  display: flex;
+  animation: left 3s;
+  text-shadow: 0px 0px 10px #6d0000;
+}
+.loader__title .oh .o {
+  color: #ff79da;
+  font-family: "Shrikhand";
+}
+.loader__title .oh .h {
+  color: #d46bdb;
+  font-family: "Shrikhand";
+}
+.loader__title .my {
+  display: flex;
+  animation: down 3s;
+  text-shadow: 0px 0px 10px #000;
+}
+.loader__title .my .m {
+  color: #cb68db;
+  font-family: "Shrikhand";
+}
+.loader__title .my .y {
+  color: #9356dc;
+  font-family: "Shrikhand";
+}
+.loader__title .food {
+  display: flex;
+  animation: right 3s;
+  text-shadow: 0px 0px 10px #000;
+}
+.loader__title .food .f {
+  color: #9469da;
+  font-family: "Shrikhand";
+}
+.loader__title .food .o2 {
+  color: #9581db;
+  font-family: "Shrikhand";
+}
+.loader__title .food .o3 {
+  color: #9699d6;
+  font-family: "Shrikhand";
+}
+.loader__title .food .d {
+  color: #97acd4;
+  font-family: "Shrikhand";
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(0.5turn);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(5turn) scale(1.3);
+  }
+  100% {
+    transform: rotate(3turn);
+  }
+}
+@keyframes left {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+@keyframes down {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateY(2turn);
+    opacity: 0;
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 1;
+    z-index: 10;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    z-index: 10;
+    opacity: 0;
+  }
+}
+
+.menu__type:nth-child(1) .menu__bloc:nth-child(2) {
+  animation: appear 2s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.menu__type:nth-child(1) .menu__bloc:nth-child(3) {
+  animation: appear 2s forwards;
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.menu__type:nth-child(1) .menu__bloc:nth-child(4) {
+  animation: appear 2s forwards;
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+.menu__type:nth-child(1) .menu__bloc:nth-child(5) {
+  animation: appear 2s forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+
+.menu__type:nth-child(2) .menu__bloc:nth-child(2) {
+  animation: appear 2s forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+}
+.menu__type:nth-child(2) .menu__bloc:nth-child(3) {
+  animation: appear 2s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+.menu__type:nth-child(2) .menu__bloc:nth-child(4) {
+  animation: appear 2s forwards;
+  animation-delay: 1.2s;
+  opacity: 0;
+}
+
+.menu__type:nth-child(3) .menu__bloc:nth-child(2) {
+  animation: appear 2s forwards;
+  animation-delay: 1.4s;
+  opacity: 0;
+}
+.menu__type:nth-child(3) .menu__bloc:nth-child(3) {
+  animation: appear 2s forwards;
+  animation-delay: 1.6s;
+  opacity: 0;
+}
+.menu__type:nth-child(3) .menu__bloc:nth-child(4) {
+  animation: appear 2s forwards;
+  animation-delay: 1.8s;
+  opacity: 0;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .top {
   height: 4rem;
   box-shadow: 0 3px 10px #C5C5C5;
@@ -36,6 +245,7 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+  background-color: #fff;
 }
 .top h1 {
   font-family: "Shrikhand";
@@ -107,30 +317,46 @@ header .top a {
 }
 header .entete img {
   width: 100%;
+  object-fit: cover;
+  object-position: 50% 64%;
+}
+@media only screen and (min-width:763px) {
+  header .entete img {
+    height: 24rem;
+  }
+}
+
+.title {
+  margin-top: -50px;
+  position: relative;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  padding: 2rem 0 1.8rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.title h1 {
+  font-family: "Shrikhand";
+  font-size: 1.8rem;
+  font-weight: 400;
 }
 
 .menu {
-  border-radius: 40px 40px 0 0;
-  margin-top: -50px;
-  position: relative;
   background-color: #F6F6F6;
   padding: 0 1rem;
   padding-bottom: 4rem;
 }
-.menu__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 0;
-}
-.menu__title i {
-  font-size: 1.5rem;
-  margin-right: 1rem;
-}
-.menu__title h1 {
-  font-family: "Shrikhand";
-  font-size: 1.8rem;
-  font-weight: 400;
+@media only screen and (min-width:1266px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 4rem;
+  }
 }
 .menu__type h2 {
   display: flex;
@@ -139,6 +365,23 @@ header .entete img {
   width: 2.5rem;
   border-bottom: 3px solid #99e2d0;
   font-weight: 300;
+}
+.menu__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+  position: relative;
+  transition: 0.3s;
+  width: 0;
+}
+.menu__circle i {
+  position: absolute;
+  transform: rotate(90deg);
+  font-size: 2.8rem;
+  color: whitesmoke;
+  transition: 0.4s;
+  animation-delay: 0.5s;
 }
 .menu__bloc {
   background-color: #fff;
@@ -156,6 +399,12 @@ header .entete img {
   font-weight: 700;
   padding-bottom: 0.25rem;
 }
+@media only screen and (min-width:1266px) {
+  .menu__bloc {
+    display: grid;
+    grid-template-columns: 1fr 1r 1fr;
+  }
+}
 .menu__sous_bloc {
   display: flex;
   justify-content: space-between;
@@ -170,6 +419,10 @@ header .entete img {
   margin-top: 3rem;
   width: 180px;
   left: calc(50% - 90px);
+}
+
+body {
+  z-index: 10;
 }
 
 header {
@@ -220,6 +473,7 @@ header nav .btn {
 }
 
 .fonctionnement {
+  background-color: #fff;
   height: 28rem;
 }
 @media only screen and (min-width:763px) {

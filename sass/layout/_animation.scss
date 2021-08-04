@@ -1,0 +1,91 @@
+.menu__type:nth-child(1) {
+    .menu__bloc:nth-child(2) {
+        animation: appear 2s forwards;
+        animation-delay: 0.2s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(3) {
+        animation: appear 2s forwards;
+        animation-delay: 0.4s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(4) {
+        animation: appear 2s forwards;
+        animation-delay: 0.6s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(5) {
+        animation: appear 2s forwards;
+        animation-delay: 0.8s;
+        opacity: 0;
+    }
+
+}
+
+.menu__type:nth-child(2) {
+    .menu__bloc:nth-child(2) {
+        animation: appear 2s forwards;
+        animation-delay: 0.8s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(3) {
+        animation: appear 2s forwards;
+        animation-delay: 1s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(4) {
+        animation: appear 2s forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+    }
+
+}
+
+.menu__type:nth-child(3) {
+    .menu__bloc:nth-child(2) {
+        animation: appear 2s forwards;
+        animation-delay: 1.4s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(3) {
+        animation: appear 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+    }
+
+    .menu__bloc:nth-child(4) {
+        animation: appear 2s forwards;
+        animation-delay: 1.8s;
+        opacity: 0;
+    }
+
+}
+
+
+
+@keyframes appear {
+    
+
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.menu__circle {
+    
+}
+
+
+
