@@ -22,7 +22,6 @@ header {
       height: 2rem;
       margin-left: 1rem;
       padding-left: 0.2rem;
-
       font-weight: bolder;
 
       &::placeholder {
@@ -31,6 +30,7 @@ header {
       }
     }
   }
+
   nav {
     background-color: $primarycolor;
     padding-bottom: 3.5rem;
@@ -78,7 +78,7 @@ header {
     }
   }
 
-  ul {
+  &__ul {
     display: flex;
     align-items: center;
     height: 4.5rem;
@@ -90,12 +90,11 @@ header {
     transition: 0.25s;
 
     @media #{$tablette} {
-      width: 350px;
+      width: 19rem;
     }
 
     @media #{$desktop} {
       width: 20%;
-      margin: 0;
     }
 
     &:hover {
@@ -121,6 +120,11 @@ header {
         transform: translateX(-10px);
       }
 
+      .fonctionnement__text {
+        @include flex-center;
+        font-weight: 600;
+      }
+      
       i {
         @include flex-center;
         padding: 0 1.5rem 0 1rem;
@@ -128,11 +132,6 @@ header {
         font-size: 1.2rem;
         font-weight: bolder;
         color: #7e7e7e;
-      }
-
-      .fonctionnement__text {
-        @include flex-center;
-        font-weight: 600;
       }
     }
   }
@@ -164,6 +163,7 @@ header {
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     box-shadow: $shadow;
 
     &__text {
@@ -172,17 +172,8 @@ header {
     }
   }
 
-  i {
-    @include flex-center;
+  .heart {
     margin-right: 1rem;
-    font-size: 1.5rem;
-    a {
-      pointer-events: none;
-    }
-
-    &:active {
-      color: blue;
-    }
   }
 
   .card_container {

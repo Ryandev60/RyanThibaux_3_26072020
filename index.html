@@ -23,32 +23,31 @@
 </head>
 
 <body>
-    <header>
-        <div class="loader">
-            <div class="loader__eiffel">
-                <img src="./images/animation/eiffel4.svg" alt="">
+    <div class="loader">
+        <div class="loader__eiffel">
+            <img src="./images/animation/eiffel4.svg" alt="">
+        </div>
+        <div class="loader__utensils">
+            <i class="fas fa-utensils"></i>
+        </div>
+        <div class="loader__title">
+            <div class="oh">
+                <p class="o">o</p>
+                <p class="h">h</p>
             </div>
-            <div class="loader__utensils">
-                <i class="fas fa-utensils"></i>
+            <div class="my">
+                <p class="m">m</p>
+                <p class="y">y</p>
             </div>
-            <div class="loader__title">
-                <div class="oh">
-                    <p class="o">o</p>
-                    <p class="h">h</p>
-                </div>
-                <div class="my">
-                    <p class="m">m</p>
-                    <p class="y">y</p>
-                </div>
-                <div class="food">
-                    <p class="f">f</p>
-                    <p class="o2">o</p>
-                    <p class="o3">o</p>
-                    <p class="d">d</p>
-                </div>
+            <div class="food">
+                <p class="f">f</p>
+                <p class="o2">o</p>
+                <p class="o3">o</p>
+                <p class="d">d</p>
             </div>
         </div>
-
+    </div>
+    <header>
         <div class="top">
             <h1>ohmyfood</h1>
         </div>
@@ -76,7 +75,7 @@
                 <p class="fonctionnement__text">Composez votre menu</p>
             </li>
         </ul>
-        <ul class="fonctionnement_ul">
+        <ul class="fonctionnement__ul">
             <li>
                 <p class="fonctionnement__number">3</p><i class="fas fa-store"></i>
                 <p class="fonctionnement__text">Dégustez au restaurant</p>
@@ -86,44 +85,52 @@
     <section id="restaurants">
         <h2>Restaurants</h2>
         <div class="card_container">
-            <a href="./menu/la_palette_du_gout.html" class="card--new">
+            <a href="./restaurant/la_palette_du_gout.html" class="card--new">
                 <img src="./images/restaurants/la_palette_du_gout.jpg" alt="">
                 <div class="content">
                     <div class="content__text">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <p class="heart"><svg width="468" height="511" viewBox="0 0 468 511" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M125 5C58.7599 5 5 67.904 5 145.411C5 303.087 140.933 344.428 233.562 500.308C321.137 345.384 462.125 298.053 462.125 145.411C462.125 67.904 408.365 5 342.125 5C294.077 5 252.723 38.1959 233.562 85.9555C214.402 38.1959 173.048 5 125 5V5Z" stroke="black" stroke-width="20"/>
+                        </svg></p>
                 </div>
             </a>
-            <a href="./menu/la_note_enchantee.html" class="card--new">
+            <a href="./restaurant/la_note_enchantee.html" class="card--new">
                 <img src="./images/restaurants/la_note_enchantee.jpg" alt="">
                 <div class="content">
                     <div class="content__text">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <p class="heart"><svg width="468" height="511" viewBox="0 0 468 511" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M125 5C58.7599 5 5 67.904 5 145.411C5 303.087 140.933 344.428 233.562 500.308C321.137 345.384 462.125 298.053 462.125 145.411C462.125 67.904 408.365 5 342.125 5C294.077 5 252.723 38.1959 233.562 85.9555C214.402 38.1959 173.048 5 125 5V5Z" stroke="black" stroke-width="20"/>
+                        </svg></p>
                 </div>
             </a>
-            <a href="./menu/a_la_francaise.html" class="card">
+            <a href="./restaurant/a_la_francaise.html" class="card">
                 <img src="./images/restaurants/a_la_francaise.jpg" alt="">
                 <div class="content">
                     <div class="content__text">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <p class="heart"><svg width="468" height="511" viewBox="0 0 468 511" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M125 5C58.7599 5 5 67.904 5 145.411C5 303.087 140.933 344.428 233.562 500.308C321.137 345.384 462.125 298.053 462.125 145.411C462.125 67.904 408.365 5 342.125 5C294.077 5 252.723 38.1959 233.562 85.9555C214.402 38.1959 173.048 5 125 5V5Z" stroke="black" stroke-width="20"/>
+                        </svg></p>
                 </div>
             </a>
-            <a href="./menu/le_delice_des_sens.html" class="card">
+            <a href="./restaurant/le_delice_des_sens.html" class="card">
                 <img src="./images/restaurants/le_delice_des_sens.jpg" alt="">
                 <div class="content">
                     <div class="content__text">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <i class="far fa-heart"></i>
+                    <p class="heart"><svg width="468" height="511" viewBox="0 0 468 511" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M125 5C58.7599 5 5 67.904 5 145.411C5 303.087 140.933 344.428 233.562 500.308C321.137 345.384 462.125 298.053 462.125 145.411C462.125 67.904 408.365 5 342.125 5C294.077 5 252.723 38.1959 233.562 85.9555C214.402 38.1959 173.048 5 125 5V5Z" stroke="black" stroke-width="20"/>
+                        </svg></p>
                 </div>
             </a>
         </div>

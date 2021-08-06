@@ -30,6 +30,25 @@
   box-shadow: 0px 0px 10px #726a6a;
 }
 
+.heart {
+  width: 25px;
+  height: 25px;
+  background: url(../../images/animation/heartoff.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: 0%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.heart:hover {
+  background-position: 50% 50%;
+  background-size: 95%;
+}
+.heart svg {
+  width: 25px;
+  height: 25px;
+}
+
 .loader {
   opacity: 0;
   z-index: -4;
@@ -140,7 +159,7 @@
 }
 @keyframes left {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(-12.5rem);
     opacity: 0;
   }
 }
@@ -152,7 +171,7 @@
 }
 @keyframes right {
   0% {
-    transform: translateX(200px);
+    transform: translateX(12.5rem);
     opacity: 0;
   }
 }
@@ -176,6 +195,7 @@
   }
 }
 
+/* ANIMATION APPARATION MENU */
 .menu__type:nth-child(1) .menu__bloc:nth-child(2) {
   animation: appear 2s forwards;
   animation-delay: 0.2s;
@@ -230,14 +250,46 @@
 }
 
 @keyframes appear {
-  0% {
+  from {
     transform: translateY(50%);
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
+/* ANIMATION CIRCLE CHEKC */
+.menu__bloc:hover h3 {
+  width: 80%;
+}
+@media only screen and (max-width:370px) {
+  .menu__bloc:hover h3 {
+    width: 75%;
+  }
+}
+.menu__bloc:hover p:nth-child(1) {
+  width: 67%;
+}
+@media only screen and (max-width:370px) {
+  .menu__bloc:hover p:nth-child(1) {
+    width: 61%;
+  }
+}
+.menu__bloc:hover p:nth-child(2) {
+  transform: translate(-3.75rem);
+}
+.menu__bloc:hover i {
+  transform: rotate(1turn);
+}
+
+p:nth-child(1) {
+  width: 92%;
+  transition: 0.3s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .top {
   height: 4rem;
   box-shadow: 0 3px 10px #C5C5C5;
@@ -330,20 +382,34 @@ header .entete img {
   margin-top: -50px;
   position: relative;
   background-color: #f6f6f6;
-  border-radius: 40px 40px 0 0;
+  border-radius: 2.5rem 2.5rem 0 0;
   padding: 2rem 0 1.8rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.title i {
-  font-size: 1.5rem;
-  margin-right: 1rem;
+@media only screen and (min-width:763px) {
+  .title {
+    justify-content: center;
+  }
 }
 .title h1 {
   font-family: "Shrikhand";
   font-size: 1.8rem;
   font-weight: 400;
+}
+@media only screen and (min-width:763px) {
+  .title h1 {
+    padding-right: 2rem;
+  }
+}
+@media only screen and (max-width:370px) {
+  .title h1 {
+    font-size: 1.6rem;
+  }
+}
+.title .heart {
+  margin-right: 1rem;
 }
 
 .menu {
@@ -366,54 +432,66 @@ header .entete img {
   border-bottom: 3px solid #99e2d0;
   font-weight: 300;
 }
-.menu__circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #99e2d0;
-  position: relative;
-  transition: 0.3s;
-  width: 0;
-}
-.menu__circle i {
-  position: absolute;
-  transform: rotate(90deg);
-  font-size: 2.8rem;
-  color: whitesmoke;
-  transition: 0.4s;
-  animation-delay: 0.5s;
-}
 .menu__bloc {
   background-color: #fff;
   border-radius: 15px;
   margin-top: 0.9rem;
-  padding: 1rem;
+  padding: 0.75rem 0 0.75rem 0.75rem;
   box-shadow: 0 3px 10px #C5C5C5;
   cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
 }
 .menu__bloc:last-child {
   margin-bottom: 2rem;
 }
-.menu__bloc h4 {
-  font-size: 1.1rem;
+.menu__bloc h3 {
+  font-size: 1.2rem;
   font-weight: 700;
   padding-bottom: 0.25rem;
+  width: 100%;
+  transition: 0.3s;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
-@media only screen and (min-width:1266px) {
-  .menu__bloc {
-    display: grid;
-    grid-template-columns: 1fr 1r 1fr;
+@media only screen and (max-width:370px) {
+  .menu__bloc h3 {
+    font-size: 1rem;
   }
 }
-.menu__sous_bloc {
+.menu__bloc .menu__sous_bloc {
   display: flex;
   justify-content: space-between;
   font-weight: 300;
-  font-size: 0.9rem;
-}
-.menu__sous_bloc p:last-child {
-  font-weight: 700;
   font-size: 1rem;
+}
+.menu__bloc .menu__sous_bloc p:nth-child(2) {
+  font-weight: 700;
+  padding-right: 1rem;
+  transition: 0.3s;
+}
+.menu__bloc:hover .menu__circle {
+  width: 3.75rem;
+  transform: translate(-3.75rem);
+}
+.menu__bloc .menu__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  background-color: #99E2D0;
+  transition: 0.3s;
+  width: 0;
+  height: 100%;
+}
+.menu__bloc .menu__circle i {
+  font-size: 1.5rem;
+  color: #fff;
+  transition: 0.3s;
 }
 .menu .btn {
   margin-top: 3rem;
@@ -498,7 +576,7 @@ header nav .btn {
     padding: 0 0 0.5rem 0;
   }
 }
-.fonctionnement ul {
+.fonctionnement__ul {
   display: flex;
   align-items: center;
   height: 4.5rem;
@@ -510,27 +588,26 @@ header nav .btn {
   transition: 0.25s;
 }
 @media only screen and (min-width:763px) {
-  .fonctionnement ul {
-    width: 350px;
+  .fonctionnement__ul {
+    width: 19rem;
   }
 }
 @media only screen and (min-width:1266px) {
-  .fonctionnement ul {
+  .fonctionnement__ul {
     width: 20%;
-    margin: 0;
   }
 }
-.fonctionnement ul:hover {
+.fonctionnement__ul:hover {
   background-color: #f5edff;
 }
-.fonctionnement ul:hover i {
+.fonctionnement__ul:hover i {
   color: #9356dc;
 }
-.fonctionnement ul li {
+.fonctionnement__ul li {
   display: flex;
   flex-direction: row;
 }
-.fonctionnement ul li .fonctionnement__number {
+.fonctionnement__ul li .fonctionnement__number {
   color: #fff;
   background-color: #9356dc;
   font-size: 0.8rem;
@@ -542,7 +619,13 @@ header nav .btn {
   align-items: center;
   transform: translateX(-10px);
 }
-.fonctionnement ul li i {
+.fonctionnement__ul li .fonctionnement__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+.fonctionnement__ul li i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -551,12 +634,6 @@ header nav .btn {
   font-size: 1.2rem;
   font-weight: bolder;
   color: #7e7e7e;
-}
-.fonctionnement ul li .fonctionnement__text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 600;
 }
 
 #restaurants {
@@ -584,24 +661,15 @@ header nav .btn {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 3px 10px #C5C5C5;
 }
 #restaurants .content__text {
   margin: 0.8rem 1rem;
   line-height: 1.5rem;
 }
-#restaurants i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#restaurants .heart {
   margin-right: 1rem;
-  font-size: 1.5rem;
-}
-#restaurants i a {
-  pointer-events: none;
-}
-#restaurants i:active {
-  color: blue;
 }
 @media only screen and (min-width:763px) {
   #restaurants .card_container {

@@ -129,7 +129,7 @@
 
   @keyframes left {
     0% {
-      transform: translateX(-200px);
+      transform: translateX(-12.5rem);
       opacity: 0;
     }
   }
@@ -143,7 +143,7 @@
 
   @keyframes right {
     0% {
-      transform: translateX(200px);
+      transform: translateX(12.5rem);
       opacity: 0;
     }
   }
