@@ -1,6 +1,6 @@
 footer {
   position:relative;
-  background-color: $secondarycolor;
+  background-color: $darkgray;
   padding: 0 1rem;
   padding-bottom: 2rem;
   color: #fff;
@@ -44,6 +44,10 @@ footer {
     li {
       font-family: "Roboto";
       line-height: 1.7rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

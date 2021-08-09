@@ -7,9 +7,9 @@
     background-size: 0%;
     transition: 0.5s;
     cursor: pointer;
+    margin-right: 1rem;
 
     &:hover {
-      background-position: 50% 50%;
       background-size: 95%;
     }
 

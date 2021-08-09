@@ -79,19 +79,35 @@
 
 /* ANIMATION CIRCLE CHEKC */
 
+.menu__circle {
+  @include flex-center;
+  position: absolute;
+  left: 100%;
+  top: 0%;
+  background-color: $mintgreen;
+  transition: 0.3s;
+  width: 0;
+  height: 100%;
+
+  i {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.3s;
+  }
+}
+
 .menu__bloc {
+
+  &:hover .menu__circle {
+    width: 3.75rem;
+    transform: translate(-3.75rem);
+  }
+
   &:hover h3 {
     width: 80%;
 
     @media #{$xs} {
       width: 75%;
-    }
-  }
-
-  &:hover p:nth-child(1) {
-    width: 67%;
-    @media #{$xs} {
-      width: 61%;
     }
   }
 
@@ -104,10 +120,15 @@
   }
 }
 
-p:nth-child(1) {
-  width: 92%;
-  transition: 0.3s;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
+/* ANIMATION CARD HOVER */ 
+
+@media #{$desktop} {
+  .card, .card--new {
+    transition: 0.5s;
+  
+    &:hover {
+      transform: scale(1.02);
+      transition: 0.5s;
+    }
+  }
 }
