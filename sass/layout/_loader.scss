@@ -8,18 +8,6 @@
   animation: load;
   animation-duration: 4s;
 
-  &__eiffel {
-    img {
-      height: 10rem;
-      position: absolute;
-      left: calc(50% - 30px);
-      top: 4%;
-      animation: rotate 3s;
-      filter: invert(81%) sepia(28%) saturate(363%) hue-rotate(115deg)
-        brightness(102%) contrast(85%);
-    }
-  }
-
   &__utensils {
     width: 150px;
     height: 150px;
@@ -144,13 +132,6 @@
   @keyframes right {
     0% {
       transform: translateX(12.5rem);
-      opacity: 0;
-    }
-  }
-
-  @keyframes rotate {
-    0% {
-      transform: rotateY(2turn);
       opacity: 0;
     }
   }

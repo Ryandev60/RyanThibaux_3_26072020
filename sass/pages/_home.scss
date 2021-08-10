@@ -4,7 +4,7 @@ header {
 
   .map {
     height: 3rem;
-    background-color: #eaeaea;
+    background-color: $midgray;
     @include flex-center;
 
     i {
@@ -13,7 +13,7 @@ header {
   }
   input {
     border: none;
-    background-color: #eaeaea;
+    background-color: $midgray;
     width: 7.5rem;
     height: 2rem;
     margin-left: 1rem;
@@ -80,14 +80,16 @@ header {
     background-color: $lightgray;
     box-shadow: $shadow;
     margin: 0rem 1rem 1.5rem 2rem;
+    padding-right: 0.8rem;
     cursor: pointer;
-    transition: 0.25s;
+    transition: 0.3s;
 
     @media #{$tablette} {
       width: 19rem;
     }
 
     @media #{$desktop} {
+      min-width: 17rem;
       width: 20%;
     }
 
@@ -179,7 +181,14 @@ header {
 
   }
 
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
   .card--new {
+    display: flex;
+    flex-direction: column;
     position: relative;
 
     &::before {
