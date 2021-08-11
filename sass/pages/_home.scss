@@ -143,7 +143,6 @@ header {
 
   .content {
     border-radius: 0 0 1rem 1rem;
-    margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -152,6 +151,7 @@ header {
     &__text {
       margin: 0.8rem 1rem;
       line-height: 1.5rem;
+      width: 100%;
     }
   }
 
@@ -165,6 +165,8 @@ header {
 
   a {
     color: #000;
+    display: flex;
+    width: 100%;
   }
 
   .card_container {
@@ -178,18 +180,21 @@ header {
     @media #{$desktop} {
       grid-template-columns: 1fr 1fr 1fr;
     }
-
   }
 
   .card {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 1rem;
   }
 
   .card--new {
     display: flex;
     flex-direction: column;
     position: relative;
+    cursor: pointer;
+    margin-bottom: 1rem;
 
     &::before {
       content: "Nouveau";
