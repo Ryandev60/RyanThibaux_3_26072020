@@ -98,7 +98,6 @@ header {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4rem;
   }
-
   &__type {
     h2 {
       display: flex;
@@ -153,12 +152,6 @@ header {
       white-space: nowrap;
       overflow: hidden;
     }
-    &:hover p:nth-child(1) {
-      width: 67%;
-      @media #{$xs} {
-        width: 61%;
-      }
-    }
 
     p:nth-child(2) {
       font-weight: 700;
@@ -173,3 +166,8 @@ header {
     left: calc(50% - 90px);
   }
 }
+
+h6 {
+  display: none;
+}
+

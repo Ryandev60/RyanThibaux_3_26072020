@@ -1,6 +1,6 @@
 /* ANIMATION APPARATION MENU */
 
-.menu__type:nth-child(1) {
+.menu__type:nth-child(2) {
   .menu__bloc:nth-child(2) {
     animation: appear 2s forwards;
     animation-delay: 0.2s;
@@ -26,7 +26,7 @@
   }
 }
 
-.menu__type:nth-child(2) {
+.menu__type:nth-child(3) {
   .menu__bloc:nth-child(2) {
     animation: appear 2s forwards;
     animation-delay: 0.8s;
@@ -46,7 +46,7 @@
   }
 }
 
-.menu__type:nth-child(3) {
+.menu__type:nth-child(4) {
   .menu__bloc:nth-child(2) {
     animation: appear 2s forwards;
     animation-delay: 1.4s;
@@ -77,7 +77,7 @@
   }
 }
 
-/* ANIMATION CIRCLE CHEKC */
+/* ANIMATION CIRCLE CHECK */
 
 .menu__circle {
   @include flex-center;
@@ -108,6 +108,13 @@
 
     @media #{$xs} {
       width: 75%;
+    }
+  }
+
+  &:hover .menu__sous_bloc p:nth-child(1) {
+    width: 67%;
+    @media #{$xs} {
+      width: 61%;
     }
   }
 
